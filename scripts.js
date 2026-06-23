@@ -23,7 +23,7 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.1 });
 
-document.querySelectorAll('.skill-card, .project-card, .exp-item, .about-content').forEach(el => {
+document.querySelectorAll('.skill-card, .project-card, .project-category, .exp-item, .about-content').forEach(el => {
   el.style.opacity = '0';
   el.style.transform = 'translateY(30px)';
   el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
