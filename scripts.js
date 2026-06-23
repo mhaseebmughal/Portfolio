@@ -17,17 +17,22 @@ document.querySelectorAll('.nav-links a').forEach(link => {
 const filterBtns = document.querySelectorAll('.filter-btn');
 const categories = document.querySelectorAll('.project-category');
 
+function showAllCategories() {
+  filterBtns.forEach(b => b.classList.remove('active'));
+  categories.forEach(cat => cat.style.display = 'block');
+}
+
 filterBtns.forEach(btn => {
   btn.addEventListener('click', () => {
+    if (btn.classList.contains('active')) {
+      showAllCategories();
+      return;
+    }
     filterBtns.forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
     const filter = btn.dataset.filter;
     categories.forEach(cat => {
-      if (filter === 'all' || cat.dataset.category === filter) {
-        cat.style.display = 'block';
-      } else {
-        cat.style.display = 'none';
-      }
+      cat.style.display = cat.dataset.category === filter ? 'block' : 'none';
     });
   });
 });
