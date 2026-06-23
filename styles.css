@@ -318,6 +318,43 @@ section {
   background: #0e0e16;
 }
 
+.project-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.8rem;
+  margin-bottom: 2.5rem;
+}
+
+.filter-btn {
+  padding: 0.6rem 1.3rem;
+  background: #12121e;
+  color: #888;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.filter-btn i {
+  font-size: 0.9rem;
+}
+
+.filter-btn:hover {
+  color: #ccc;
+  border-color: rgba(102, 126, 234, 0.3);
+}
+
+.filter-btn.active {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #fff;
+  border-color: transparent;
+}
+
 .project-category {
   margin-bottom: 3rem;
 }

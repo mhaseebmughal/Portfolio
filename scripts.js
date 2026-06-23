@@ -13,6 +13,25 @@ document.querySelectorAll('.nav-links a').forEach(link => {
   });
 });
 
+// Project filter buttons
+const filterBtns = document.querySelectorAll('.filter-btn');
+const categories = document.querySelectorAll('.project-category');
+
+filterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    filterBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const filter = btn.dataset.filter;
+    categories.forEach(cat => {
+      if (filter === 'all' || cat.dataset.category === filter) {
+        cat.style.display = 'block';
+      } else {
+        cat.style.display = 'none';
+      }
+    });
+  });
+});
+
 // Scroll reveal animation
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {

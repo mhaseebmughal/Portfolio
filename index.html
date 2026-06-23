@@ -77,7 +77,16 @@
     <div class="section-container">
       <h2 class="section-title">Projects</h2>
 
-      <div class="project-category">
+      <div class="project-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="renders"><i class="fas fa-image"></i> 3D Renders</button>
+        <button class="filter-btn" data-filter="characters"><i class="fas fa-user"></i> Characters</button>
+        <button class="filter-btn" data-filter="environments"><i class="fas fa-tree"></i> Environments</button>
+        <button class="filter-btn" data-filter="animations"><i class="fas fa-running"></i> Animations</button>
+        <button class="filter-btn" data-filter="uiux"><i class="fas fa-gamepad"></i> Game UI/UX</button>
+      </div>
+
+      <div class="project-category" data-category="renders">
         <h3 class="category-title"><i class="fas fa-image"></i> 3D Renders</h3>
         <div class="projects-grid">
           <div class="project-card">
@@ -105,7 +114,7 @@
         <div class="add-more"><i class="fas fa-plus-circle"></i> Add more renders</div>
       </div>
 
-      <div class="project-category">
+      <div class="project-category" data-category="characters">
         <h3 class="category-title"><i class="fas fa-user"></i> Character Modeling</h3>
         <div class="projects-grid">
           <div class="project-card">
@@ -133,7 +142,7 @@
         <div class="add-more"><i class="fas fa-plus-circle"></i> Add more characters</div>
       </div>
 
-      <div class="project-category">
+      <div class="project-category" data-category="environments">
         <h3 class="category-title"><i class="fas fa-tree"></i> Environment Art</h3>
         <div class="projects-grid">
           <div class="project-card">
@@ -161,7 +170,7 @@
         <div class="add-more"><i class="fas fa-plus-circle"></i> Add more environments</div>
       </div>
 
-      <div class="project-category">
+      <div class="project-category" data-category="animations">
         <h3 class="category-title"><i class="fas fa-running"></i> Animations</h3>
         <div class="projects-grid">
           <div class="project-card">
@@ -189,7 +198,7 @@
         <div class="add-more"><i class="fas fa-plus-circle"></i> Add more animations</div>
       </div>
 
-      <div class="project-category">
+      <div class="project-category" data-category="uiux">
         <h3 class="category-title"><i class="fas fa-gamepad"></i> Game UI/UX</h3>
         <div class="projects-grid">
           <div class="project-card">
